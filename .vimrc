@@ -1,9 +1,9 @@
 "========================= linux下用的配置文件============================
 " DesCription: My vimrc
 "
-" Last Change: 2014 08 24
+" Last Change: 2014 03 24
 "
-" Version: 1.2
+" Version: 1.1
 "=========================================================================
 
 
@@ -107,26 +107,26 @@ map <leader>g :vimgrep // **/*.erl<left><left><left><left><left><left><left><lef
 let $VIMFILES = $HOME.'/.vim'
 let helptags=$VIMFILES.'/doc'
 
-" 配置多语言环境
-if has("multi_byte")
-	" UTF-8 编码
-	set encoding=utf-8
-	set termencoding=utf-8
-	set formatoptions+=mM
-	set fencs=utf-8,gbk
-
-	if v:lang =~? '^\(zh\)\|\(ja\)\|\(ko\)'
-		set ambiwidth=double
-	endif
-
-	if has("win32")
-		source $VIMRUNTIME/delmenu.vim
-		source $VIMRUNTIME/menu.vim
-		language messages zh_CN.utf-8
-	endif
-else
-	echoerr "Sorry, this version of (g)vim was not compiled with +multi_byte"
-endif
+" " 配置多语言环境
+" if has("multi_byte")
+" 	" UTF-8 编码
+set encoding=utf-8
+" 	set termencoding=utf-8
+" 	set formatoptions+=mM
+" 	set fencs=utf-8,gbk
+" 
+" 	if v:lang =~? '^\(zh\)\|\(ja\)\|\(ko\)'
+" 		set ambiwidth=double
+" 	endif
+" 
+" 	if has("win32")
+" 		source $VIMRUNTIME/delmenu.vim
+" 		source $VIMRUNTIME/menu.vim
+" 		language messages zh_CN.utf-8
+" 	endif
+" else
+" 	echoerr "Sorry, this version of (g)vim was not compiled with +multi_byte"
+" endif
 
 " Buffers操作快捷方式!
 nnoremap <C-RETURN> :bnext<CR>
